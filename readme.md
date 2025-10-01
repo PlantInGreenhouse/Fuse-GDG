@@ -96,7 +96,7 @@ PY
 
 - `train.tsv`, `valid.tsv`, `test.tsv` contain triples in **TSV**: `head\trelation\ttail` (no header).
 - `entity2index.pkl`, `relation2index.pkl` map **string IDs → integer indices**.
-- Embedding `.npy` files are ``** arrays** whose **row order** matches the integer indices.
+- Embedding `.npy` files are arrays whose **row order** matches the integer indices.
 
 ### Required files per dataset
 
@@ -179,7 +179,7 @@ python main.py --data suppkg ... --model_state_file suppkg_model_stateXXXX.pth
   title        = {Fuse-GDG: Leveraging graph structural, domain knowledge, global context to enhance GNN-based link prediction on Biomedical knowledge graphs},
   author       = {DaeHo Kim, TaeHeon Seong, SoYeop Yoo and OkRan Jeong},
   year         = {2025},
-  url          = {https://github.com/plantingreenhouse/FUSE_GDG}
+  url          = {https://github.com/PlantInGreenhouse/Fuse-GDG}
 }
 ```
 
