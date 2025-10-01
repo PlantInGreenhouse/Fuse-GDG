@@ -1,4 +1,4 @@
-# FUSE\_GDG
+# Fuse-GDG
 
 > **Graph + Domain + Global (GDG) fusion for link prediction**
 
