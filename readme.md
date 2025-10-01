@@ -93,7 +93,7 @@ pip install -r requirements.txt
 ### Required files per dataset
 
 - `pubmedbert_embeddings_768.npy`  → `--text_embedding_file`
-- `poincare_embeddings.npy`        → `--knowledge_embedding_file`
+- `poincare_embeddings.npy`        → `--graph_embedding_file`
 - `global_embeddings.npy`          → `--global_embedding_file`
 
 ---
