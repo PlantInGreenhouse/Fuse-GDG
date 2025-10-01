@@ -29,15 +29,15 @@ FUSE_GDG/
 │  ├─ entity_with_definition/
 │  │  ├─ train_aligned.json
 │  │  ├─ valid_aligned.json
-│  │  ├─ test_aligned.json
-│  │  └─ ... (index2entity.pkl, index2relation.pkl)
+│  │  └─ test_aligned.json
 │  ├─ entity2index.pkl
+│  ├─ index2entity.pkl
+│  ├─ index2relation.pkl
 │  ├─ relation2index.pkl
 │  ├─ pubmedbert_embeddings_768.npy      # Files downloaded from Google Drive
 │  ├─ poincare_embeddings.npy
 │  ├─ global_embeddings.npy              # Files downloaded from Google Drive
-│  ├─ train.tsv | valid.tsv | test.tsv   # Triples: head \t relation \t tail
-│  └─ ...
+│  └─ train.tsv | valid.tsv | test.tsv   # Triples: head \t relation \t tail
 ├─ suppkg/
 │  ├─ (same layout as hetionet/)
 ├─ data_loader.py
@@ -47,7 +47,7 @@ FUSE_GDG/
 └─ requirements.txt
 ```
 
-> **Note**: The `entity_with_definition/` folder is optional during runtime but documents how the global embeddings were aligned to definitions.
+> **Note**: The `entity_with_definition/` The folder is optional during runtime and you can see how the names, types, and definitions of the entities are configured.
 
 ---
 
@@ -78,14 +78,6 @@ conda create -n fuse_gdg python=3.10 -y
 conda activate fuse_gdg
 # If you already have CUDA 12.4 drivers/toolkit
 pip install -r requirements.txt
-
-# Optional sanity check
-python - <<'PY'
-import torch, dgl
-print('torch:', torch.__version__, 'cuda?', torch.cuda.is_available())
-print('dgl  :', dgl.__version__)
-print('device count:', torch.cuda.device_count())
-PY
 ```
 
 > If you use a different CUDA version, install the **matching** wheels for both PyTorch and DGL.
